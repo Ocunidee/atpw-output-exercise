@@ -11,7 +11,7 @@ export class BookComponent {
   @Output() borrowed = new EventEmitter<void>()
 
   borrow(): void {
-    // TODO
+    this.borrowed.emit()
   }
 }
 

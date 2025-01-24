@@ -1,5 +1,5 @@
 <h1>Welcome to my library</h1>
 
 @for(book of books; track book.title) {
-  <app-book [book]="book"></app-book>
+  <app-book [book]="book" (borrowed)="markForBorrowing(book)"></app-book>
 }
