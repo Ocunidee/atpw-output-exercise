@@ -11,7 +11,7 @@ export class BookComponent {
   borrowed = output<void>()
 
   borrow(): void {
-    // TODO
+    this.borrowed.emit()
   }
 }
 
