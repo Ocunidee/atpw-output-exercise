@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core'
+import { Component, input, output } from '@angular/core'
 
 @Component({
   selector: 'app-book',
@@ -7,8 +7,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core'
   styleUrl: './book.component.scss'
 })
 export class BookComponent {
-  @Input() book: Book | undefined
-  @Output() borrowed = new EventEmitter<void>()
+  book = input.required<Book | undefined>()
+  borrowed = output<void>()
 
   borrow(): void {
     // TODO

@@ -1,4 +1,4 @@
-@if (book) {
+@if (book(); as book) {
   <h2>{{book.title}}</h2>
   <div>Author: {{book.author}}</div>
   <div>Number of pages: {{book.pageCount}}</div>

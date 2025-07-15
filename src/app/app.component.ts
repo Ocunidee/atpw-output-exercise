@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, signal } from '@angular/core'
 import { Book, BookComponent } from './book/book.component'
 
 @Component({
@@ -8,7 +8,7 @@ import { Book, BookComponent } from './book/book.component'
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  books = [
+  books = signal([
     {
       title: 'The Way of Kings',
       author: 'Brandon Sanderson',
@@ -24,7 +24,7 @@ export class AppComponent {
       author: 'Patrick Rothfuss',
       pageCount: 662
     }
-  ]
+  ])
 
   markForBorrowing(book: Book): void {
     console.log(`Borrowing ${book.title}`)
