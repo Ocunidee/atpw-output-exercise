@@ -7,8 +7,8 @@ import { Component, input, output } from '@angular/core'
   styleUrl: './book.component.scss'
 })
 export class BookComponent {
-  book = input.required<Book | undefined>()
-  borrowed = output<void>()
+  readonly book = input.required<Book | undefined>()
+  readonly borrowed = output<void>()
 
   borrow(): void {
     // TODO

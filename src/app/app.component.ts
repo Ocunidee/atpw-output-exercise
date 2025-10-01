@@ -8,7 +8,7 @@ import { Book, BookComponent } from './book/book.component'
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  books = signal([
+  protected readonly books = signal([
     {
       title: 'The Way of Kings',
       author: 'Brandon Sanderson',
